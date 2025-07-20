@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events Hub</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EnnovaMax </div>
+        <div class="nav-links">
+            <button onclick="showSection('events')" class="active">Events</button>
+            <button onclick="showSection('recommendations')">For You</button>
+            <button onclick="showSection('leaderboard')">Leaderboard</button>
+            <a href="http://127.0.0.1:5500/opt2/index.html"><button id="loginBtn">Login</button></a> 
+        </div>
+    </nav>
+
+    <main>
+        <section id="events" class="active">
+            <div class="filters">
+                <input type="text" id="searchEvents" placeholder="Search events...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="hackathon">Hackathon</option>
+                    <option value="networking">Hardware</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="competition">Competition</option>
+                    <option value="conference">Conference</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="academic">Academic</option>
+                    <option value="exhibition">Exhibition</option>
+                    <option value="networking">Networking</option>
+                </select>
+            </div>
+            <div class="events-grid" id="eventsGrid"></div>
+            
+            <div class="suggestion-box">
+                <h3>Suggest an Event</h3>
+                <textarea id="suggestionText" placeholder="Share your event idea or suggestion..."></textarea>
+                <button onclick="submitSuggestion()">Submit Suggestion</button>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Recommended for You</h2>
+            <div class="recommendations-grid" id="recommendationsGrid"></div>
+        </section>
+
+        <section id="leaderboard">
+            <h2>Top Participants</h2>
+            <div class="leaderboard-list" id="leaderboardList"></div>
+        </section>
+    </main>
+
+    <footer class="contact-bar">
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Contact Us</h3>
+                <p>Email: sumitsharma1563452@gmail.com</p>
+                <p>Phone: 6377391881</p>
+            </div>
+            <div class="contact-item">
+                <h3>Follow Us</h3>
+                <p>Twitter: @CollegeEventsHub</p>
+                <p>Instagram: @CollegeEventsHub</p>
+            </div>
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>Anand International college of Engineering</p>
+                <p>Jaipur,Rajasthan </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body
